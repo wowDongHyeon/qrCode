@@ -14,7 +14,7 @@
 
 1. 프로젝트 클론
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/wowDongHyeon/qrCode.git
 cd qrCode
 ```
 
