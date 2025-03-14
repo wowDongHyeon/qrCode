@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# 학생증 QR코드 시스템
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+블록체인 기반 DID(Decentralized Identifier)를 활용한 학생증 QR코드 시스템입니다.
 
-## Available Scripts
+## 기능
 
-In the project directory, you can run:
+- 학생증 정보 입력
+- DID 기반 QR코드 생성
+- QR코드 스캔 및 검증
+- 학생증 정보 표시
 
-### `npm start`
+## 설치 방법
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. 프로젝트 클론
+```bash
+git clone [your-repository-url]
+cd qrCode
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. 기본 의존성 설치
+```bash
+npm install
+```
 
-### `npm test`
+3. DID 관련 의존성 설치
+```bash
+npm install did-jwt
+npm install @spruceid/didkit-wasm
+npm install @decentralized-identity/did-jwt
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. QR코드 관련 의존성 설치
+```bash
+npm install qrcode.react
+npm install jsqr
+```
 
-### `npm run build`
+5. UI 관련 의존성 설치
+```bash
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. 개발 서버 실행
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 사용 방법
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. 학생증 정보 입력
+   - 이름, 학번, 학과, 학년 정보를 입력합니다.
+   - "QR코드 생성" 버튼을 클릭합니다.
 
-### `npm run eject`
+2. QR코드 생성
+   - 입력된 정보와 DID가 포함된 QR코드가 생성됩니다.
+   - "QR코드 스캔하기" 버튼을 클릭하여 스캔 모드로 전환할 수 있습니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. QR코드 스캔
+   - 카메라를 사용하여 QR코드를 스캔합니다.
+   - 스캔된 정보가 화면에 표시됩니다.
+   - DID 검증 결과가 함께 표시됩니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 기술 스택
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React
+- Material-UI
+- QRCode.react
+- jsQR
+- did-jwt
+- DIDKit
+- Decentralized Identity
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 주의사항
 
-## Learn More
+- 카메라 접근 권한이 필요합니다.
+- HTTPS 환경에서 실행하는 것을 권장합니다.
+- 실제 운영 환경에서는 블록체인 연동이 필요합니다.
+- DID 관련 패키지 설치 시 Node.js 버전 18 이상이 필요할 수 있습니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 라이선스
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[your-license]
